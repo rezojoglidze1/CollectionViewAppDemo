@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VyQ-9i-26L">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order-->
+        <scene sceneID="Txr-Vs-BKy">
+            <objects>
+                <viewController id="VyQ-9i-26L" customClass="OrderViewController" customModule="WiredBrainCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xwy-iT-kSX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-bU-P0m">
+                                <rect key="frame" x="16" y="30" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NpM-Rm-BFv">
+                                <rect key="frame" x="16" y="82" width="343" height="565"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TfY-p2-FQ4">
+                                    <size key="itemSize" width="148" height="141"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="50" height="23"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderCardCell" id="VXi-jl-EpN" customClass="OrderCollectionViewCell" customModule="WiredBrainCoffee" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="55" width="148" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AbY-cI-P0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otc-EO-qjr">
+                                                    <rect key="frame" x="69" y="60.5" width="10.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Otc-EO-qjr" firstAttribute="centerX" secondItem="AbY-cI-P0E" secondAttribute="centerX" id="jyv-bG-hjG"/>
+                                                <constraint firstItem="Otc-EO-qjr" firstAttribute="centerY" secondItem="AbY-cI-P0E" secondAttribute="centerY" id="qxF-vD-yfU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="148" height="141"/>
+                                        <connections>
+                                            <outlet property="orderCollectionViewTextlabel" destination="Otc-EO-qjr" id="KC0-Yz-g8Z"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sectionHeader" id="BSp-e0-6v1" userLabel="Header" customClass="HeaderOrderCollectionReusableView" customModule="WiredBrainCoffee" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4g-N0-j10">
+                                            <rect key="frame" x="16" y="6" width="311" height="38"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="m4g-N0-j10" secondAttribute="bottom" constant="6" id="6vU-FS-xoI"/>
+                                        <constraint firstAttribute="trailing" secondItem="m4g-N0-j10" secondAttribute="trailing" constant="16" id="7FI-NP-n5E"/>
+                                        <constraint firstItem="m4g-N0-j10" firstAttribute="top" secondItem="BSp-e0-6v1" secondAttribute="top" constant="6" id="AbE-aL-xqB"/>
+                                        <constraint firstItem="m4g-N0-j10" firstAttribute="leading" secondItem="BSp-e0-6v1" secondAttribute="leading" constant="16" id="rr7-Uw-ASb"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderLabel" destination="m4g-N0-j10" id="I9g-tk-dNe"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sectionFooter" id="VWc-ru-LCU" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="201" width="343" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Footer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAL-Wk-CkR">
+                                            <rect key="frame" x="16" y="6" width="311" height="11"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="IAL-Wk-CkR" secondAttribute="trailing" constant="16" id="4jk-89-FVY"/>
+                                        <constraint firstItem="IAL-Wk-CkR" firstAttribute="leading" secondItem="VWc-ru-LCU" secondAttribute="leading" constant="16" id="JQv-Pr-crS"/>
+                                        <constraint firstAttribute="bottom" secondItem="IAL-Wk-CkR" secondAttribute="bottom" constant="6" id="Q3i-mS-zeZ"/>
+                                        <constraint firstItem="IAL-Wk-CkR" firstAttribute="top" secondItem="VWc-ru-LCU" secondAttribute="top" constant="6" id="zvE-3Z-wJE"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NpM-Rm-BFv" firstAttribute="top" secondItem="mWL-bU-P0m" secondAttribute="bottom" constant="16" id="5xu-gJ-y52"/>
+                            <constraint firstItem="mWL-bU-P0m" firstAttribute="leading" secondItem="Yp3-tf-EyY" secondAttribute="leading" constant="16" id="WVF-aY-m9z"/>
+                            <constraint firstItem="mWL-bU-P0m" firstAttribute="top" secondItem="Yp3-tf-EyY" secondAttribute="top" constant="30" id="h7y-2s-9uD"/>
+                            <constraint firstItem="Yp3-tf-EyY" firstAttribute="trailing" secondItem="mWL-bU-P0m" secondAttribute="trailing" constant="16" id="mrf-4V-1zm"/>
+                            <constraint firstItem="Yp3-tf-EyY" firstAttribute="bottom" secondItem="NpM-Rm-BFv" secondAttribute="bottom" constant="20" id="oQS-n3-6B5"/>
+                            <constraint firstItem="Yp3-tf-EyY" firstAttribute="trailing" secondItem="NpM-Rm-BFv" secondAttribute="trailing" constant="16" id="wck-6C-ebc"/>
+                            <constraint firstItem="NpM-Rm-BFv" firstAttribute="leading" secondItem="Yp3-tf-EyY" secondAttribute="leading" constant="16" id="xCp-Dz-Y6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yp3-tf-EyY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Order" image="Order" id="8iD-sq-Of0"/>
+                    <connections>
+                        <outlet property="orderViewCollection" destination="NpM-Rm-BFv" id="Szu-nS-rAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGp-6b-P0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="15.742128935532236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Order" width="22" height="22"/>
+    </resources>
+</document>
